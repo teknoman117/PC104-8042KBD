@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name SFUSat)(type Legacy)(uri ${KIPRJMOD}/KiCad-Lib/SFUSat.lib)(options "")(descr ""))
+  (lib (name Components)(type Legacy)(uri ${KIPRJMOD}/Components.lib)(options "")(descr ""))
+)
