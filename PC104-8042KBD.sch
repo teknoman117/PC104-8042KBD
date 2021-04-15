@@ -739,28 +739,6 @@ Wire Wire Line
 Connection ~ 9500 2400
 Wire Wire Line
 	9250 2400 9500 2400
-$Comp
-L Connector:USB_A J2
-U 1 1 5FC86B44
-P 10550 2650
-F 0 "J2" H 10750 2300 50  0000 R CNN
-F 1 "Mouse" H 10750 3000 50  0000 R CNN
-F 2 "Connector_USB:USB_A_Molex_67643_Horizontal" H 10700 2600 50  0001 C CNN
-F 3 " ~" H 10700 2600 50  0001 C CNN
-	1    10550 2650
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:USB_A J3
-U 1 1 5FC896B2
-P 10550 3600
-F 0 "J3" H 10750 3250 50  0000 R CNN
-F 1 "Keyboard" H 10750 3950 50  0000 R CNN
-F 2 "Connector_USB:USB_A_Molex_67643_Horizontal" H 10700 3550 50  0001 C CNN
-F 3 " ~" H 10700 3550 50  0001 C CNN
-	1    10550 3600
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	10250 2650 10050 2650
 Wire Wire Line
@@ -790,18 +768,8 @@ Wire Wire Line
 	10200 3800 10250 3800
 Connection ~ 10200 2850
 Wire Wire Line
-	10550 2250 10650 2250
-Wire Wire Line
 	10900 2250 10900 3200
-Connection ~ 10650 2250
-Wire Wire Line
-	10650 2250 10900 2250
-Wire Wire Line
-	10550 3200 10650 3200
 Connection ~ 10900 3200
-Connection ~ 10650 3200
-Wire Wire Line
-	10650 3200 10900 3200
 $Comp
 L power:GND #PWR0112
 U 1 1 5FCDF581
@@ -1403,16 +1371,6 @@ Wire Wire Line
 Connection ~ 8450 5500
 Wire Wire Line
 	8100 5200 8100 5600
-Wire Bus Line
-	3400 5200 3400 5900
-Wire Bus Line
-	1400 6100 1400 6800
-Wire Bus Line
-	2100 950  2100 1650
-Wire Bus Line
-	6350 2150 6350 2850
-Wire Bus Line
-	2050 2350 2050 4050
 Connection ~ 8100 5600
 $Comp
 L Device:R_Network05_Split RN1
@@ -1425,4 +1383,46 @@ F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8450 5050 50  0001 C CNN
 	1    8450 5050
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:USB_A J2
+U 1 1 60802089
+P 10550 2650
+F 0 "J2" H 10750 2300 50  0000 R CNN
+F 1 "Mouse" H 10750 3050 50  0000 R CNN
+F 2 "Connector_USB:USB_A_Molex_67643_Horizontal" H 10700 2600 50  0001 C CNN
+F 3 " ~" H 10700 2600 50  0001 C CNN
+	1    10550 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10650 2250 10900 2250
+Wire Wire Line
+	10650 2250 10550 2250
+Connection ~ 10650 2250
+$Comp
+L Connector:USB_A J3
+U 1 1 6081E571
+P 10550 3600
+F 0 "J3" H 10750 3250 50  0000 R CNN
+F 1 "Keyboard" H 10750 4000 50  0000 R CNN
+F 2 "Connector_USB:USB_A_Molex_67643_Horizontal" H 10700 3550 50  0001 C CNN
+F 3 " ~" H 10700 3550 50  0001 C CNN
+	1    10550 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10650 3200 10900 3200
+Wire Wire Line
+	10650 3200 10550 3200
+Wire Bus Line
+	3400 5200 3400 5900
+Wire Bus Line
+	1400 6100 1400 6800
+Wire Bus Line
+	2100 950  2100 1650
+Wire Bus Line
+	6350 2150 6350 2850
+Wire Bus Line
+	2050 2350 2050 4050
+Connection ~ 10650 3200
 $EndSCHEMATC
