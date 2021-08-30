@@ -6,4 +6,4 @@ An 8-bit PC/104 keyboard and mouse (PS2) controller for the Technologic Systems 
 
 The keyboard interrupt is on IRQ 1 for a classic DOS PC, but this interrupt is not available on the PC/104 bus. The TS-3100 has a non-compliant PC/104 bus connector to begin with (most signals are LVCMOS33 due to usage of 74LVC parts and XC9500XL CPLDs, and the DMA pins are replaced with some board specific features like a 386EX chip select unit output and chip select signal overrides for the onboard flash memory), and has IRQ 1 wired in place of IOCHK on later revisions. A jumper is available to connect the keyboard interrupt to IOCHK, or a jumper wire can be used to connect it elsewhere. In the case of my TS-3100s, the IOCHK pin is not electrically connected anywhere, so I have a jumper wire to a GPIO header where IRQ 1 is broken out (DIO1 pin 14). A small BIOS hack is required to enable the IRQ 1 function on this pin at boot.
 
-
+Licensed under CC-BY-SA 4.0
